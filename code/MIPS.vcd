@@ -1,0 +1,512 @@
+$date
+	Thu Jun 06 19:55:20 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module main $end
+$var wire 1 ! RegWrite $end
+$var wire 1 " regWrite $end
+$var wire 32 # readData2 [31:0] $end
+$var wire 32 $ readData1 [31:0] $end
+$var wire 1 % jump $end
+$var wire 32 & dataMemory [31:0] $end
+$var wire 1 ' Zero $end
+$var wire 32 ( WriteData [31:0] $end
+$var wire 32 ) Soma [31:0] $end
+$var wire 32 * SaidaShift [31:0] $end
+$var wire 32 + SaidaMuxAlu [31:0] $end
+$var wire 32 , SaidaMuxAdd [31:0] $end
+$var wire 5 - SaidaMux1 [4:0] $end
+$var wire 32 . SaidaExtend [31:0] $end
+$var wire 1 / RegDst $end
+$var wire 5 0 RT [4:0] $end
+$var wire 5 1 RS [4:0] $end
+$var wire 5 2 RD [4:0] $end
+$var wire 32 3 ProxInstrucao [31:0] $end
+$var wire 6 4 OpCode [5:0] $end
+$var wire 1 5 MemWrite $end
+$var wire 1 6 MemToReg $end
+$var wire 1 7 MemRead $end
+$var wire 32 8 InstrucaoSaida [31:0] $end
+$var wire 6 9 FuncCode [5:0] $end
+$var wire 32 : EnderecoSaida [31:0] $end
+$var wire 16 ; Endereco [15:0] $end
+$var wire 1 < ControleAnd $end
+$var wire 1 = Branch $end
+$var wire 1 > ALUSrc $end
+$var wire 32 ? ALUOut [31:0] $end
+$var wire 2 @ ALUOp [1:0] $end
+$var wire 4 A ALUCtl [3:0] $end
+$var wire 32 B ALUAddResult [31:0] $end
+$var reg 32 C EnderecoEntrada [31:0] $end
+$var reg 1 D clock $end
+$scope module ALU $end
+$var wire 32 E B [31:0] $end
+$var wire 4 F ALUCtl [3:0] $end
+$var wire 32 G A [31:0] $end
+$var reg 32 H ALUOut [31:0] $end
+$var reg 1 ' Zero $end
+$upscope $end
+$scope module AndE $end
+$var wire 1 ' Zero $end
+$var wire 1 = Branch $end
+$var reg 1 < ControleAND $end
+$upscope $end
+$scope module Controle $end
+$var wire 6 I opcode [5:0] $end
+$var reg 2 J ALUOp [1:0] $end
+$var reg 1 > ALUSrc $end
+$var reg 1 = Branch $end
+$var reg 1 7 MemRead $end
+$var reg 1 6 MemToReg $end
+$var reg 1 5 MemWrite $end
+$var reg 1 / RegDst $end
+$var reg 1 % jump $end
+$var reg 1 " regWrite $end
+$upscope $end
+$scope module ControleAlu $end
+$var wire 2 K ALUOp [1:0] $end
+$var wire 6 L FuncCode [5:0] $end
+$var reg 4 M ALUCtl [3:0] $end
+$upscope $end
+$scope module Instrucao $end
+$var wire 32 N EnderecoEntrada [31:0] $end
+$var wire 6 O OpCode [5:0] $end
+$var reg 16 P Endereco [15:0] $end
+$var reg 6 Q FuncCode [5:0] $end
+$var reg 5 R RD [4:0] $end
+$var reg 5 S RS [4:0] $end
+$var reg 5 T RT [4:0] $end
+$upscope $end
+$scope module PC $end
+$var wire 32 U EnderecoEntrada [31:0] $end
+$var wire 1 D clock $end
+$var reg 32 V EnderecoSaida [31:0] $end
+$upscope $end
+$scope module add $end
+$var wire 32 W Shift [31:0] $end
+$var wire 32 X Entrada1 [31:0] $end
+$var reg 32 Y ALUAddResult [31:0] $end
+$upscope $end
+$scope module deslocamento $end
+$var wire 32 Z entrada [31:0] $end
+$var reg 32 [ SaidaShift [31:0] $end
+$upscope $end
+$scope module desvio $end
+$var wire 1 < ControleAND $end
+$var wire 32 \ Mux1 [31:0] $end
+$var wire 32 ] Mux0 [31:0] $end
+$var reg 32 ^ SaidaMuxAdd [31:0] $end
+$upscope $end
+$scope module extensor $end
+$var wire 16 _ instructionIn [15:0] $end
+$var wire 32 ` instructionOut [31:0] $end
+$upscope $end
+$scope module memoria_dados $end
+$var wire 1 7 MemRead $end
+$var wire 1 5 MemWrite $end
+$var wire 32 a adress [31:0] $end
+$var wire 32 b writeData [31:0] $end
+$var wire 32 c dataMemory [31:0] $end
+$upscope $end
+$scope module memory $end
+$var wire 32 d EnderecoEntrada [31:0] $end
+$var reg 32 e InstrucaoSaida [31:0] $end
+$var reg 32 f ProxInstrucao [31:0] $end
+$upscope $end
+$scope module mux1 $end
+$var wire 5 g RD [4:0] $end
+$var wire 5 h RT [4:0] $end
+$var wire 1 / RegDst $end
+$var reg 5 i SaidaMux1 [4:0] $end
+$upscope $end
+$scope module muxalu $end
+$var wire 1 > ALUSrc $end
+$var wire 32 j Mux1 [31:0] $end
+$var wire 32 k Mux0 [31:0] $end
+$var reg 32 l SaidaMuxAlu [31:0] $end
+$upscope $end
+$scope module muxdata $end
+$var wire 32 m ALUResult [31:0] $end
+$var wire 1 6 MemToReg $end
+$var wire 32 n ReadData [31:0] $end
+$var reg 32 o WriteData [31:0] $end
+$upscope $end
+$scope module registrador $end
+$var wire 5 p RD [4:0] $end
+$var wire 5 q RS [4:0] $end
+$var wire 5 r RT [4:0] $end
+$var wire 1 ! RegWrite $end
+$var wire 5 s WriteRegister [4:0] $end
+$var wire 32 t readData1 [31:0] $end
+$var wire 32 u readData2 [31:0] $end
+$upscope $end
+$scope module soma $end
+$var wire 32 v a [31:0] $end
+$var reg 32 w soma [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b100 w
+b0 v
+b0 u
+b0 t
+b0 s
+b0 r
+b0 q
+b0 p
+b0 o
+bx n
+b0 m
+b0 l
+b0 k
+b0 j
+b0 i
+b0 h
+b0 g
+b1000010011000000000100010 f
+b10001100100100000000100000 e
+b0 d
+bx c
+b0 b
+b0 a
+b0 `
+b0 _
+b100 ^
+b100 ]
+b100 \
+b0 [
+b0 Z
+b100 Y
+b100 X
+b0 W
+b0 V
+b0 U
+b0 T
+b0 S
+b0 R
+b0 Q
+b0 P
+b0 O
+b0 N
+bx M
+b0 L
+b10 K
+b10 J
+b0 I
+b0 H
+b0 G
+bx F
+b0 E
+0D
+b0 C
+b100 B
+bx A
+b10 @
+b0 ?
+0>
+0=
+0<
+b0 ;
+b0 :
+b0 9
+b10001100100100000000100000 8
+07
+06
+05
+b0 4
+b1000010011000000000100010 3
+b0 2
+b0 1
+b0 0
+1/
+b0 .
+b0 -
+b100 ,
+b0 +
+b0 *
+b100 )
+b0 (
+1'
+bx &
+0%
+b0 $
+b0 #
+1"
+z!
+$end
+#1
+b11000 B
+b11000 Y
+b11000 \
+b10000 *
+b10000 W
+b10000 [
+b1000 )
+b1000 X
+b1000 ]
+b1000 w
+b1001010100100000000100101 3
+b1001010100100000000100101 f
+b1000010011000000000100010 8
+b1000010011000000000100010 e
+b100 .
+b100 Z
+b100 `
+b100 j
+b100 ;
+b100 P
+b100 _
+b100 9
+b100 L
+b100 Q
+b100 :
+b100 V
+b100 v
+b100 C
+b100 N
+b100 U
+b100 d
+1D
+#2
+b101100 B
+b101100 Y
+b101100 \
+b100000 *
+b100000 W
+b100000 [
+b1100 )
+b1100 X
+b1100 ]
+b1100 w
+b1000 .
+b1000 Z
+b1000 `
+b1000 j
+b1000 ;
+b1000 P
+b1000 _
+b1000 9
+b1000 L
+b1000 Q
+b10001110011010000000000000001000 3
+b10001110011010000000000000001000 f
+b1001010100100000000100101 8
+b1001010100100000000100101 e
+b1000 :
+b1000 V
+b1000 v
+b1000 C
+b1000 N
+b1000 U
+b1000 d
+0D
+#3
+b1000000 B
+b1000000 Y
+b1000000 \
+b110000 *
+b110000 W
+b110000 [
+b10000 )
+b10000 X
+b10000 ]
+b10000 w
+b1001010100100000000100100 3
+b1001010100100000000100100 f
+b10001110011010000000000000001000 8
+b10001110011010000000000000001000 e
+b1100 .
+b1100 Z
+b1100 `
+b1100 j
+b1100 ;
+b1100 P
+b1100 _
+b1100 9
+b1100 L
+b1100 Q
+b1100 :
+b1100 V
+b1100 v
+b1100 C
+b1100 N
+b1100 U
+b1100 d
+1D
+#4
+b1010100 B
+b1010100 Y
+b1010100 \
+b1000000 *
+b1000000 W
+b1000000 [
+b10100 )
+b10100 X
+b10100 ]
+b10100 w
+b10000 .
+b10000 Z
+b10000 `
+b10000 j
+b10000 ;
+b10000 P
+b10000 _
+b10000 9
+b10000 L
+b10000 Q
+b10101110011010000000000000110000 3
+b10101110011010000000000000110000 f
+b1001010100100000000100100 8
+b1001010100100000000100100 e
+b10000 :
+b10000 V
+b10000 v
+b10000 C
+b10000 N
+b10000 U
+b10000 d
+0D
+#5
+b1101000 B
+b1101000 Y
+b1101000 \
+b1010000 *
+b1010000 W
+b1010000 [
+b11000 )
+b11000 X
+b11000 ]
+b11000 w
+b10010001100010000000000000001 3
+b10010001100010000000000000001 f
+b10101110011010000000000000110000 8
+b10101110011010000000000000110000 e
+b10100 .
+b10100 Z
+b10100 `
+b10100 j
+b10100 ;
+b10100 P
+b10100 _
+b10100 9
+b10100 L
+b10100 Q
+b10100 :
+b10100 V
+b10100 v
+b10100 C
+b10100 N
+b10100 U
+b10100 d
+1D
+#6
+b1111100 B
+b1111100 Y
+b1111100 \
+b1100000 *
+b1100000 W
+b1100000 [
+b11100 )
+b11100 X
+b11100 ]
+b11100 w
+b11000 .
+b11000 Z
+b11000 `
+b11000 j
+b11000 ;
+b11000 P
+b11000 _
+b11000 9
+b11000 L
+b11000 Q
+b1000000000000000000000001000 3
+b1000000000000000000000001000 f
+b10010001100010000000000000001 8
+b10010001100010000000000000001 e
+b11000 :
+b11000 V
+b11000 v
+b11000 C
+b11000 N
+b11000 U
+b11000 d
+0D
+#7
+b10010000 B
+b10010000 Y
+b10010000 \
+b1110000 *
+b1110000 W
+b1110000 [
+b100000 )
+b100000 X
+b100000 ]
+b100000 w
+b10011101000100000000101010 3
+b10011101000100000000101010 f
+b1000000000000000000000001000 8
+b1000000000000000000000001000 e
+b11100 .
+b11100 Z
+b11100 `
+b11100 j
+b11100 ;
+b11100 P
+b11100 _
+b11100 9
+b11100 L
+b11100 Q
+b11100 :
+b11100 V
+b11100 v
+b11100 C
+b11100 N
+b11100 U
+b11100 d
+1D
+#8
+b10100100 B
+b10100100 Y
+b10100100 \
+b10000000 *
+b10000000 W
+b10000000 [
+b10 A
+b10 F
+b10 M
+b100100 )
+b100100 X
+b100100 ]
+b100100 w
+b100000 .
+b100000 Z
+b100000 `
+b100000 j
+b100000 ;
+b100000 P
+b100000 _
+b100000 9
+b100000 L
+b100000 Q
+bx 3
+bx f
+b10011101000100000000101010 8
+b10011101000100000000101010 e
+b100000 :
+b100000 V
+b100000 v
+b100000 C
+b100000 N
+b100000 U
+b100000 d
+0D
+#9
+1D
